@@ -17,9 +17,9 @@ public class Server {
                 System.out.println("Waiting for clients...");
                 socket = serverSocket.accept(); //waiting for client request on the host and port of this server
                 System.out.println("Connected");
-                ClientHandler clientThread = new ClientHandler(socket, clients);
-                clients.add(clientThread);
-                clientThread.start();
+                ClientHandler clientThread = new ClientHandler(socket, clients); //creating new thread
+                clients.add(clientThread); // adding client to thread
+                clientThread.start();//starting thread
             }
         } catch (IOException e) {
             e.printStackTrace();
