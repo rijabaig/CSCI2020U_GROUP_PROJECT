@@ -61,7 +61,7 @@ public class Controller {
     public Label nameExists;
     @FXML
     public Label checkEmail;
-    public static String username, password, gender;
+    public static String username, pass, gender;
     public static ArrayList<User> loggedInUser = new ArrayList<>();
     public static ArrayList<User> users = new ArrayList<User>();
 // registration method
@@ -156,10 +156,10 @@ public class Controller {
 
     public void login() {
         username = userName.getText();
-        password = passWord.getText();
+        pass = passWord.getText();
         boolean login = false;
         for (User x : users) { //if username and password are correct, prints name and allows for login
-            if (x.name.equalsIgnoreCase(username) && x.password.equalsIgnoreCase(password)) {
+            if (x.name.equalsIgnoreCase(username) && x.pass.equalsIgnoreCase(pass)) {
                 login = true;
                 loggedInUser.add(x);
                 System.out.println(x.name);
