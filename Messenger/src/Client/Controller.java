@@ -76,7 +76,7 @@ public class Controller {
                 if(checkEmail(regEmail.getText())) {
                     User newUser = new User(); //now we will create a new user
                     newUser.name = regName.getText(); //adding all the details to the new user
-                    newUser.password = regPass.getText();
+                    newUser.pass = regPass.getText();
                     newUser.email = regEmail.getText();
                     newUser.fullName = regFirstName.getText();
                     newUser.phoneNo = regPhoneNo.getText();
