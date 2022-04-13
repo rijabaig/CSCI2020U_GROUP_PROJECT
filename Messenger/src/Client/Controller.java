@@ -64,9 +64,9 @@ public class Controller {
     public static String username, password, gender;
     public static ArrayList<User> loggedInUser = new ArrayList<>();
     public static ArrayList<User> users = new ArrayList<User>();
-
-    public void registration() {
-        if (!regName.getText().equalsIgnoreCase("")
+// registration method
+    public void registration() { //we will check if the fields are empty
+        if (!regName.getText().equalsIgnoreCase("") 
                 && !regPass.getText().equalsIgnoreCase("")
                 && !regEmail.getText().equalsIgnoreCase("")
                 && !regFirstName.getText().equalsIgnoreCase("")
@@ -74,13 +74,13 @@ public class Controller {
                 && (male.isSelected() || female.isSelected())) {
             if(checkUser(regName.getText())) {
                 if(checkEmail(regEmail.getText())) {
-                    User newUser = new User();
-                    newUser.name = regName.getText();
+                    User newUser = new User(); //now we will create a new user
+                    newUser.name = regName.getText(); //adding all the details to the new user
                     newUser.password = regPass.getText();
                     newUser.email = regEmail.getText();
                     newUser.fullName = regFirstName.getText();
                     newUser.phoneNo = regPhoneNo.getText();
-                    if (male.isSelected()) {
+                    if (male.isSelected()) { //sets gender of user based off selection
                         newUser.gender = "Male";
                     } else {
                         newUser.gender = "Female";
@@ -124,7 +124,7 @@ public class Controller {
         checkEmail.setOpacity(0);
         nameExists.setOpacity(0);
     }
-
+//this will check if a user exists
     private boolean checkUser(String username) {
         for(User user : users) {
             if(user.name.equalsIgnoreCase(username)) {
@@ -133,7 +133,7 @@ public class Controller {
         }
         return true;
     }
-
+///checks if email exists 
     private boolean checkEmail(String email) {
         for(User user : users) {
             if(user.email.equalsIgnoreCase(email)) {
@@ -142,7 +142,7 @@ public class Controller {
         }
         return true;
     }
-
+//sets default back to blank fields
     private void makeDefault() {
         regName.setText("");
         regPass.setText("");
@@ -158,7 +158,7 @@ public class Controller {
         username = userName.getText();
         password = passWord.getText();
         boolean login = false;
-        for (User x : users) {
+        for (User x : users) { //if username and password are correct, prints name and allows for login
             if (x.name.equalsIgnoreCase(username) && x.password.equalsIgnoreCase(password)) {
                 login = true;
                 loggedInUser.add(x);
@@ -166,22 +166,22 @@ public class Controller {
                 gender = x.gender;
                 break;
             }
-        }
+        }//here the window will change if the username and password entered are correct
         if (login) {
             changeWindow();
         } else {
             loginNotifier.setOpacity(1);
         }
     }
-
+//method to change current window
     public void changeWindow() {
         try {
             Stage stage = (Stage) userName.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
+            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));//calls fxml  file to creatte chat room
             stage.setScene(new Scene(root, 330, 560));
             stage.setTitle(username + "");
             stage.setOnCloseRequest(event -> {
-                System.exit(0);
+                System.exit(0); //exits system if selected exit
             });
             stage.setResizable(false);
             stage.show();
@@ -192,7 +192,7 @@ public class Controller {
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        if (event.getSource().equals(btnSignUp)) {
+        if (event.getSource().equals(btnSignUp)) { 
             new FadeIn(pnSignUp).play();
             pnSignUp.toFront();
         }
