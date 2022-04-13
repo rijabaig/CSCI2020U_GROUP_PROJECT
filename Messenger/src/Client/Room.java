@@ -84,7 +84,7 @@ public class Room extends Thread implements Initializable {
         try  //connects socket with server local host and portnumber
             socket = new Socket("localhost", 8889);
             System.out.println("Socket is connected with server!"); 
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream())); //creating input and output streams to the socket
             writer = new PrintWriter(socket.getOutputStream(), true);
             this.start();
         } catch (IOException e) {
@@ -167,7 +167,7 @@ public class Room extends Thread implements Initializable {
         msgRoom.appendText("Me: " + msg + "\n");
         msgField.setText("");
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
-            System.exit(0);
+            System.exit(0); //exits system with keywords bye or logout when sent
         }
     }
 
@@ -175,11 +175,11 @@ public class Room extends Thread implements Initializable {
 
     public boolean saveControl = false;
 
-    public void chooseImageButton(ActionEvent event) {
+    public void chooseImageButton(ActionEvent event) { //by clicking the button we can choose the image from file
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");
-        this.filePath = fileChooser.showOpenDialog(stage);
+        this.filePath = fileChooser.showOpenDialog(stage); //allows u to set the image as the profile pic
         fileChoosePath.setText(filePath.getPath());
         saveControl = true;
     }
@@ -192,7 +192,7 @@ public class Room extends Thread implements Initializable {
 
     public void saveImage() {
         if (saveControl) {
-            try {
+            try { //saving image to path
                 BufferedImage bufferedImage = ImageIO.read(filePath);
                 Image image = SwingFXUtils.toFXImage(bufferedImage, null);
                 proImage.setImage(image);
@@ -208,7 +208,7 @@ public class Room extends Thread implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         showProPic.setStroke(Color.valueOf("#90a4ae"));
-        Image image;
+        Image image; //setting male and female profile pics
         if(Controller.gender.equalsIgnoreCase("Male")) {
             image = new Image("icons/user.png", false);
         } else {
