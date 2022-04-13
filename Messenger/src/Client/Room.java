@@ -97,18 +97,18 @@ public class Room extends Thread implements Initializable {
         try {
             while (true) {
                 String msg = reader.readLine();
-                String[] tokens = msg.split(" ");
-                String cmd = tokens[0];
+                String[] tokens = msg.split(" "); //creating array called tokens
+                String cmd = tokens[0]; 
                 System.out.println(cmd);
-                StringBuilder fulmsg = new StringBuilder();
+                StringBuilder full_msg = new StringBuilder(); //constructing stringbuilder called full_msg
                 for(int i = 1; i < tokens.length; i++) {
-                    fulmsg.append(tokens[i]);
+                    full_msg.append(tokens[i]); //appending message to tokens array
                 }
-                System.out.println(fulmsg);
+                System.out.println(full_msg);
                 if (cmd.equalsIgnoreCase(Controller.username + ":")) {
-                    continue;
-                } else if(fulmsg.toString().equalsIgnoreCase("bye")) {
-                    break;
+                    continue; //continue of tokens[0] is equal to the username: 
+                } else if(full_msg.toString().equalsIgnoreCase("bye")) {
+                    break; //if full message is "bye", break
                 }
                 msgRoom.appendText(msg + "\n");
             }
