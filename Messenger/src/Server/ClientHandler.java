@@ -9,14 +9,14 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.ArrayList;
-
+//clienthandler class
 public class ClientHandler extends Thread {
 
     private ArrayList<ClientHandler> clients;
     private Socket socket;
     private BufferedReader reader;
     private PrintWriter writer;
-
+//constructor
     public ClientHandler(Socket socket, ArrayList<ClientHandler> clients) {
         try {
             this.socket = socket;
@@ -33,17 +33,17 @@ public class ClientHandler extends Thread {
         try {
             String msg;
             while ((msg = reader.readLine()) != null) {
-                if (msg.equalsIgnoreCase( "exit")) {
+                if (msg.equalsIgnoreCase( "exit")) { //if recieved exit from client, exit
                     break;
-                }
+                } 
                 for (ClientHandler cl : clients) {
-                    cl.writer.println(msg);
+                    cl.writer.println(msg); //user writes message
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        finally {
+        finally { //closing resources
             try {
                 reader.close();
                 writer.close();
