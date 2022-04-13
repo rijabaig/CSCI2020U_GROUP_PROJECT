@@ -81,9 +81,9 @@ public class Room extends Thread implements Initializable {
 
 
     public void connectSocket() {
-        try {
+        try  //connects socket with server local host and portnumber
             socket = new Socket("localhost", 8889);
-            System.out.println("Socket is connected with server!");
+            System.out.println("Socket is connected with server!"); 
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
             this.start();
