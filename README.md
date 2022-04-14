@@ -7,10 +7,10 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
   * Majority of Client and Server Side code <br />
   * Bug Checking and Code Testing <br />
   * Editing and refining code <br />
-##### Rija Baig: <br />
+##### Rija Baig (100746674): <br />
   * Code cleansing, and code explanations (comments) <br />
   * README.md and Repository setup <br />
-##### Aparnna Hariharan: <br />
+##### Aparnna Hariharan (100751918): <br />
   * Client and Server Side code <br />
 ##### Dev Rajivkumar Thaker: <br />
   * Majority of Client and Server Side code <br />
