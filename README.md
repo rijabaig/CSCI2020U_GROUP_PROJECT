@@ -17,6 +17,7 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
   * Editing and refining code <br />
 
 # Introduction
+This program is a messaging software 
 # Video Demonstration 
 # How to Run the Project (Step-By-Step)
 # Photos
