@@ -17,7 +17,7 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
   * Editing and refining code <br />
 
 # Introduction
-This program is a messaging software 
+This program is an interactive messaging software.  It was implemented using a combination of client- server sockets, multithreading, file I/O, and finally, displayed using JavaFX. After running it, users 
 # Video Demonstration 
 # How to Run the Project (Step-By-Step)
 # Photos
