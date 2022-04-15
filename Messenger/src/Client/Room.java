@@ -82,12 +82,12 @@ public class Room extends Thread implements Initializable {
     Socket socket;
 
 
-
+    //connects socket with server local host and portnumber
     public void connectSocket() {
         try {
             socket = new Socket("localhost", 8889);
             System.out.println("Socket is connected with server!");
-            reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            reader = new BufferedReader(new InputStreamReader(socket.getInputStream())); //creating input and output streams to the socket
             writer = new PrintWriter(socket.getOutputStream(), true);
             this.start();
         } catch (IOException e) {
@@ -100,18 +100,18 @@ public class Room extends Thread implements Initializable {
         try {
             while (true) {
                 String msg = reader.readLine();
-                String[] tokens = msg.split(" ");
+                String[] tokens = msg.split(" "); //creating array called tokens
                 String cmd = tokens[0];
                 System.out.println(cmd);
-                StringBuilder fulmsg = new StringBuilder();
+                StringBuilder fulmsg = new StringBuilder(); //constructing stringbuilder called full_msg
                 for(int i = 1; i < tokens.length; i++) {
-                    fulmsg.append(tokens[i]);
+                    fulmsg.append(tokens[i]); //appending message to tokens array
                 }
                 System.out.println(fulmsg);
                 if (cmd.equalsIgnoreCase(Controller.username + ":")) {
-                    continue;
+                    continue; //continue of tokens[0] is equal to the username: 
                 } else if(fulmsg.toString().equalsIgnoreCase("bye")) {
-                    break;
+                    break; //if full message is "bye", break
                 }
                 msgRoom.appendText(msg + "\n");
             }
@@ -170,7 +170,7 @@ public class Room extends Thread implements Initializable {
         msgRoom.appendText("Me: " + msg + "\n");
         msgField.setText("");
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
-            System.exit(0);
+            System.exit(0); //exits system with keywords bye or logout when sent
         }
     }
 
@@ -178,11 +178,11 @@ public class Room extends Thread implements Initializable {
 
     public boolean saveControl = false;
 
-    public void chooseImageButton(ActionEvent event) {
+    public void chooseImageButton(ActionEvent event) { //by clicking the button we can choose the image from file
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
         fileChooser.setTitle("Open Image");
-        this.filePath = fileChooser.showOpenDialog(stage);
+        this.filePath = fileChooser.showOpenDialog(stage); //allows u to set the image as the profile pic
         fileChoosePath.setText(filePath.getPath());
         saveControl = true;
     }
@@ -211,7 +211,7 @@ public class Room extends Thread implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         showProPic.setStroke(Color.valueOf("#90a4ae"));
-        Image image;
+        Image image; //setting male and female profile pics
         if(Controller.gender.equalsIgnoreCase("Male")) {
             image = new Image("icons/user.png", false);
         } else {
