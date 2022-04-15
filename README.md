@@ -79,7 +79,9 @@ This program is an interactive messaging software.  It was implemented using a c
 * java.awt.image.BufferedImage;
 * java.util.ResourceBundle;
 # Extra Notes
-* There is a java CSS bug when the Main file is run. The program still works, but for now there is no known solution to this bug:
+* It seems that javaFX CSS generally has many bugs and issues that can arise randomly. That being said, there is a javaFX CSS bug when our Main file is run. The program still works, but for now there is no known solution to this bug:
 
 WARNING: Caught 'java.lang.ClassCastException: class javafx.scene.paint.Color cannot be cast to class java.lang.String (javafx.scene.paint.Color is in module javafx.graphics of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')' while converting value for '-fx-focus-traversable' from inline style on TextField[id=userName, styleClass=text-input text-field txtFont]
+
+Here is some more info on this bug: https://bugs.openjdk.java.net/browse/JDK-8268657
 
