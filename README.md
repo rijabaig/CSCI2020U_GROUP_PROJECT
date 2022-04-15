@@ -19,11 +19,17 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
 # Introduction
 This program is an interactive messaging software.  It was implemented using a combination of client- server sockets, multithreading, file I/O, and finally, displayed using JavaFX. After running it, users are met with a login page where they are asked to put in their username and password. If the user does not currently hold an account, they have the option to sign up. When the sign up button is clicked, a new page opens up where the user can enter all of their information to create an account. It is important to note that if the user is entering information that already exists, there will be an error preventing them from creating the account with that information. Once the user enters the information they can continue and create the account then login. Once they login, they can begin sending messeges to other users, while also viewing their message history on screen. Once they are done, they can logout, ending the whole process.  
 # Photo Gallery
+* The login page
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png "Login Page")
+* Signup Page
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/signup.png "Signup Page")
+* Chat Page
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/chatpage.png "Chat Page")
+* Profile page with user info
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/profileinfo.png "Profile Page")
+* An example of a typical chat with a user
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/chatexample.png "Chat with User")
+* Scenebuilder
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/scenebuilder.png "Scenebuilder")
 # Video Demonstration 
 [![Watch the video]https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png](https://www.youtube.com/watch?v=lSGm8P7wH8I&feature=youtu.be)
