@@ -33,17 +33,18 @@ public class ClientHandler extends Thread {
         try {
             String msg;
             while ((msg = reader.readLine()) != null) {
-                if (msg.equalsIgnoreCase( "exit")) {
+                if (msg.equalsIgnoreCase( "exit")) { //if recieved exit from client, exit
                     break;
                 }
                 for (ClientHandler cl : clients) {
-                    cl.writer.println(msg);
+                    cl.writer.println(msg); //user writes message
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        finally {
+        //closing resources
+        finally { 
             try {
                 reader.close();
                 writer.close();
