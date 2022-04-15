@@ -12,14 +12,15 @@ public class Server {
         ServerSocket serverSocket;
         Socket socket;
         try {
+            // creating and opening a new server socket with port number 8889
             serverSocket = new ServerSocket(8889);
             while(true) {
                 System.out.println("Lets connect the clients");
-                socket = serverSocket.accept();
+                socket = serverSocket.accept(); //waiting for client request on the host and port of this server
                 System.out.println("Client Connected");
-                ClientHandler clientThread = new ClientHandler(socket, clients);
-                clients.add(clientThread);
-                clientThread.start();
+                ClientHandler clientThread = new ClientHandler(socket, clients); //creating new thread
+                clients.add(clientThread); // adding client to thread
+                clientThread.start(); //starting thread
             }
         } catch (IOException e) {
             e.printStackTrace();
