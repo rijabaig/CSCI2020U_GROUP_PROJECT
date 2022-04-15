@@ -26,7 +26,7 @@ This program is an interactive messaging software.  It was implemented using a c
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/chatexample.png "Chat with User")
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/scenebuilder.png "Scenebuilder")
 # Video Demonstration 
-[![Watch the video](https://www.youtube.com/watch?v=lSGm8P7wH8I&feature=youtu.be)
+[![Watch the video]https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png](https://www.youtube.com/watch?v=lSGm8P7wH8I&feature=youtu.be)
 # How to Run the Project (Step-By-Step)
 * First export the files in this repository to a zip file. 
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step1.png "Zip File")
