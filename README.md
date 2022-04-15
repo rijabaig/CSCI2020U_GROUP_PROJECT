@@ -3,7 +3,7 @@
 Welcome! This is our Final Project repo. Here you can find all you need to know about our program and how to run it. We have added screenshots on how to download and run the files, a demonstration video of the program, group member information, and all the source files. 
 
 # Group Members and Contributions: <br />
-##### Neel Samirkumar Shah: <br />
+##### Neel Samirkumar Shah (100789924): <br />
   * Majority of Client and Server Side code <br />
   * Bug Checking and Code Testing <br />
   * Editing and refining code <br />
@@ -12,7 +12,7 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
   * README.md and Repository setup <br />
 ##### Aparnna Hariharan (100751918): <br />
   * Client and Server Side code <br />
-##### Dev Rajivkumar Thaker: <br />
+##### Dev Rajivkumar Thaker (100808882): <br />
   * Majority of Client and Server Side code <br />
   * Editing and refining code <br />
 
