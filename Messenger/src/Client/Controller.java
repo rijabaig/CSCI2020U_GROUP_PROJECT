@@ -20,7 +20,7 @@ import java.util.ArrayList;
 
 public class Controller {
 
-
+// controller class with all the buttons, labels and textfields
 
     @FXML
     public Pane pnSignIn;
