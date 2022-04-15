@@ -123,12 +123,12 @@ public class Room extends Thread implements Initializable {
         }
     }
 
-
+//profile page
     public void handleProfileBtn(ActionEvent event) {
         if (event.getSource().equals(profileBtn) && !toggleProfile) {
             new FadeIn(profile).play();
-            profile.toFront();
-            chat.toBack();
+            profile.toFront(); //when button is clicked the profile page comes to view
+            chat.toBack(); // the chat is sent to the back
             toggleProfile = true;
             toggleChat = false;
             profileBtn.setText("Back");
@@ -141,7 +141,7 @@ public class Room extends Thread implements Initializable {
             profileBtn.setText("Profile");
         }
     }
-
+//setting up profile information
     public void setProfile() {
         for (User user : users) {
             if (Controller.username.equalsIgnoreCase(user.name)) {
@@ -162,11 +162,11 @@ public class Room extends Thread implements Initializable {
         }
     }
 
-
+// sending message
     public void send() {
         String msg = msgField.getText();
-        writer.println(Controller.username + ": " + msg);
-        msgRoom.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT);
+        writer.println(Controller.username + ": " + msg); // prints message with username
+        msgRoom.setNodeOrientation(NodeOrientation.LEFT_TO_RIGHT); //so that messages are written on left side of pane
         msgRoom.appendText("Me: " + msg + "\n");
         msgField.setText("");
         if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
@@ -186,13 +186,13 @@ public class Room extends Thread implements Initializable {
         fileChoosePath.setText(filePath.getPath());
         saveControl = true;
     }
-
+//allows you to send message by clicking enter
     public void sendMessageByKey(KeyEvent event) {
         if (event.getCode().toString().equals("ENTER")) {
             send();
         }
     }
-
+//save image from personal files as profile pic
     public void saveImage() {
         if (saveControl) {
             try {
