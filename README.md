@@ -27,6 +27,8 @@ This program is an interactive messaging software.  It was implemented using a c
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/scenebuilder.png "Scenebuilder")
 # Video Demonstration 
 # How to Run the Project (Step-By-Step)
+* First export the files in this repository to a zip file. 
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP "Login Page")
 # Libraries Used
 # Extra Notes
 
