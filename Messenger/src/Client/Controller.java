@@ -65,7 +65,8 @@ public class Controller {
     public static String username, password, gender;
     public static ArrayList<User> loggedInUser = new ArrayList<>();
     public static ArrayList<User> users = new ArrayList<User>();
-
+// registration method
+     //we will check if the fields are empty or not
     public void registration() {
         if (!regName.getText().equalsIgnoreCase("")
                 && !regPass.getText().equalsIgnoreCase("")
@@ -73,23 +74,24 @@ public class Controller {
                 && !regFirstName.getText().equalsIgnoreCase("")
                 && !regPhoneNo.getText().equalsIgnoreCase("")
                 && (male.isSelected() || female.isSelected())) {
+            //if its not empty, get all text entered
             if(checkUser(regName.getText())) {
                 if(checkEmail(regEmail.getText())) {
-                    User newUser = new User();
-                    newUser.name = regName.getText();
-                    newUser.password = regPass.getText();
-                    newUser.email = regEmail.getText();
-                    newUser.fullName = regFirstName.getText();
-                    newUser.phoneNo = regPhoneNo.getText();
+                    User newUser = new User(); //now we will create a new user
+                    newUser.name = regName.getText(); //adding all the details to the new user (name)
+                    newUser.password = regPass.getText(); // saving pass to new user
+                    newUser.email = regEmail.getText(); //email
+                    newUser.fullName = regFirstName.getText(); //name
+                    newUser.phoneNo = regPhoneNo.getText(); //phone number
                     if (male.isSelected()) {
-                        newUser.gender = "Male";
+                        newUser.gender = "Male"; //if male was selected then saves gender as male
                     } else {
                         newUser.gender = "Female";
                     }
-                    users.add(newUser);
-                    goBack.setOpacity(1);
+                    users.add(newUser); //now we are adding this information to users
+                    goBack.setOpacity(1); //setting opacities
                     success.setOpacity(1);
-                    makeDefault();
+                    makeDefault(); //setting default opacity
                     if (controlRegLabel.getOpacity() == 1) {
                         controlRegLabel.setOpacity(0);
                     }
@@ -109,7 +111,7 @@ public class Controller {
             setOpacity(success, goBack, nameExists, checkEmail);
         }
     }
-
+//setting opacity
     private void setOpacity(Label a, Label b, Label c, Label d) {
         if(a.getOpacity() == 1 || b.getOpacity() == 1 || c.getOpacity() == 1 || d.getOpacity() == 1) {
             a.setOpacity(0);
@@ -125,7 +127,7 @@ public class Controller {
         checkEmail.setOpacity(0);
         nameExists.setOpacity(0);
     }
-
+//this will check if a user exists
     private boolean checkUser(String username) {
         for(User user : users) {
             if(user.name.equalsIgnoreCase(username)) {
@@ -134,7 +136,7 @@ public class Controller {
         }
         return true;
     }
-
+//checks if email exists 
     private boolean checkEmail(String email) {
         for(User user : users) {
             if(user.email.equalsIgnoreCase(email)) {
@@ -143,7 +145,7 @@ public class Controller {
         }
         return true;
     }
-
+//sets default back to blank fields
     private void makeDefault() {
         regName.setText("");
         regPass.setText("");
@@ -154,35 +156,36 @@ public class Controller {
         setOpacity(controlRegLabel, checkEmail, nameExists);
     }
 
-
+//login page
     public void login() {
         username = userName.getText();
         password = passWord.getText();
-        boolean login = false;
-        for (User x : users) {
+        boolean login = false; //setting to false as default
+        for (User x : users) { //if username and password are correct, prints name and allows for login
             if (x.name.equalsIgnoreCase(username) && x.password.equalsIgnoreCase(password)) {
-                login = true;
+                login = true; //will be true only when correct information is entered
                 loggedInUser.add(x);
-                System.out.println(x.name);
+                System.out.println(x.name); //prints logged in users name
                 gender = x.gender;
                 break;
             }
         }
+        //here the window will change if the username and password entered are correct
         if (login) {
             changeWindow();
         } else {
             loginNotifier.setOpacity(1);
         }
     }
-
+    //method to change current window
     public void changeWindow() {
         try {
             Stage stage = (Stage) userName.getScene().getWindow();
-            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml"));
-            stage.setScene(new Scene(root, 330, 560));
+            Parent root = FXMLLoader.load(this.getClass().getResource("Room.fxml")); //calls fxml  file to create chat room
+            stage.setScene(new Scene(root, 330, 560)); //setting scene
             stage.setTitle(username + "");
             stage.setOnCloseRequest(event -> {
-                System.exit(0);
+                System.exit(0); //exits system if selected exit
             });
             stage.setResizable(false);
             stage.show();
