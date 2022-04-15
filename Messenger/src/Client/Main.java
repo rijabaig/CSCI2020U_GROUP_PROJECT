@@ -13,8 +13,8 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("sample.fxml")));
-        primaryStage.setTitle("OntarioTech Chat Application");
-        primaryStage.setScene(new Scene(root, 330, 560));
+        primaryStage.setTitle("OntarioTech Chat Application"); //title
+        primaryStage.setScene(new Scene(root, 330, 560)); //setting scene
         primaryStage.setResizable(false);
         primaryStage.show();
     }
