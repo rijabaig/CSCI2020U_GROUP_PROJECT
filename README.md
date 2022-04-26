@@ -43,38 +43,38 @@ This program is an interactive messaging software.  It was implemented using a c
 
 * Now you can click OK and start running the program! You must obviously run the server side first, and then, the client side! Enjoy. :)
 # Libraries Used
-* java.io.*;
-import javafx.animation.TranslateTransition;
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
-import javafx.scene.control.TextInputDialog;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
-import javafx.stage.Stage;
-import javafx.util.Duration;
-import java.net.URL;
-import java.util.Optional;
-import java.util.ResourceBundle;
+* java.io.*;<br />
+import javafx.animation.TranslateTransition; <br />
+import javafx.application.Platform;<br />
+import javafx.beans.value.ChangeListener;<br />
+import javafx.beans.value.ObservableValue;<br />
+import javafx.event.ActionEvent;<br />
+import javafx.event.EventHandler;<br />
+import javafx.fxml.FXML;<br />
+import javafx.fxml.FXMLLoader;<br />
+import javafx.fxml.Initializable;<br />
+import javafx.geometry.Insets;<br />
+import javafx.geometry.Pos;<br />
+import javafx.scene.Node;<br />
+import javafx.scene.Parent;<br />
+import javafx.scene.Scene;<br />
+import javafx.scene.control.Button;<br />
+import javafx.scene.control.ScrollPane;<br />
+import javafx.scene.control.TextField;<br />
+import javafx.scene.control.TextInputDialog;<br />
+import javafx.scene.layout.AnchorPane;<br />
+import javafx.scene.layout.HBox;<br />
+import javafx.scene.layout.VBox;<br />
+import javafx.scene.paint.Color;<br />
+import javafx.scene.paint.Paint;<br />
+import javafx.scene.shape.Circle;<br />
+import javafx.scene.text.Text;<br />
+import javafx.scene.text.TextFlow;<br />
+import javafx.stage.Stage;<br />
+import javafx.util.Duration;<br />
+import java.net.URL;<br />
+import java.util.Optional;<br />
+import java.util.ResourceBundle;<br />
 
 
 
