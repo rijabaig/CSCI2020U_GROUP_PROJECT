@@ -17,8 +17,8 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
   * Editing and refining code <br />
 
 # Introduction
-This program is a basic messaging software.  It was implemented using a combination of client- server sockets, multithreading, file I/O, and finally, displayed using JavaFX. After running it, users are met with a page where they can send a chat to another server, while also viewing the message history on screen. 
- 
+ This program is an interactive messaging software.  It was implemented using a combination of client- server sockets, multithreading, file I/O, and finally, displayed using JavaFX. After running it, chat window is displayed, where you can chat with the server. Additionally, an About us button is featured which displays information about the app. Once they login, they can begin sending messeges to other users, while also viewing their message history on screen. Additionally, a fun button is featured on the client side, which runs an animation when clicked on it. 
+# Photo Gallery
 # Photo Gallery
 * The login page <br />
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png "Login Page")
@@ -37,16 +37,13 @@ This program is a basic messaging software.  It was implemented using a combinat
 # How to Run the Project (Step-By-Step)
 * First export the files in this repository to a zip file. 
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step1.png "Zip File")
-* Extract the folders to the directory of your choice. Then go in that folder and right click to open the messenger folder in the IDE of your choice (preferably IntelliJ). After this, trust the project. 
-* Once opened. Go to File -> Project Structure -> Modules -> Dependencies. Click the "+" to add Jars or Directories. Then you can select the files from the "JAR files" folder in the group project folder. Then click OK.
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step2.png "JAR Files")
-* Now while stillin modules, go to sources. Select the src folder. Then click sources button above, with the blue folder logo. Now click OK.
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step3.png "JAR Files")
+* Extract the folders to the directory of your choice. Then go in that folder and right click to open the MessengerClient folder and MessengerServer folder in the IDE of your choice (preferably IntelliJ). After this, trust the project. 
+
 * Now we have to add run configurations for our project. Click Add Configuration. Now make the Server and Main class as main classes. The configurations should match the photos below:
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step4.png "JAR Files")
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/part5!.png "JAR Files")
-* Now for the Main file run configurations, we need to add VM options. Select Modify Options -> Add VM options. Then type in <br /> --module-path " C:\Users\rijay\java\javafx-sdk-17.0.2\lib" --add-modules javafx.controls,javafx.fxml <br /> where the path in the quotes is your path to your javafx jar files.
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/part6.png "JAR Files")
+
+
 * Now you can click OK and start running the program! 
 # Libraries Used
 * java.io.*;
