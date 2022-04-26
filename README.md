@@ -41,43 +41,40 @@ This program is an interactive messaging software.  It was implemented using a c
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/servermain.png)
 
 
-* Now you can click OK and start running the program! 
+* Now you can click OK and start running the program! You must obviously run the server side first, and then, the client side! Enjoy. :)
 # Libraries Used
 * java.io.*;
-* java.net.ServerSocket;
-* java.net.Socket;
-* java.util.ArrayList;
-* java.io.BufferedReader;
-* java.io.IOException;
-* java.io.InputStreamReader;
-* java.io.PrintWriter;
-* animatefx.animation.FadeIn;
-* javafx.event.ActionEvent;
-* javafx.fxml.FXML;
-* javafx.fxml.FXMLLoader;
-* javafx.scene.Parent;
-* javafx.scene.Scene;
-* javafx.scene.control.Button;
-* javafx.scene.control.Label;
-* javafx.scene.control.RadioButton;
-* javafx.scene.control.TextField;
-* javafx.scene.image.ImageView;
-* javafx.scene.input.MouseEvent;
-* javafx.scene.layout.Pane;
-* javafx.stage.Stage;
-* java.io.IOException;
-* javafx.application.Application;
-* javafx.embed.swing.SwingFXUtils;
-* javafx.fxml.Initializable;
-* javafx.geometry.NodeOrientation;
-* javafx.scene.Node;
-* javafx.scene.input.KeyEvent;
-* javafx.scene.paint.Color;
-* javafx.scene.paint.ImagePattern;
-* javafx.scene.shape.Circle;
-* javafx.stage.FileChooser;
-* javax.imageio.ImageIO;
-* java.awt.image.BufferedImage;
-* java.util.ResourceBundle;
+import javafx.animation.TranslateTransition;
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+import java.net.URL;
+import java.util.Optional;
+import java.util.ResourceBundle;
+
 
 
