@@ -75,6 +75,7 @@ import javafx.util.Duration;<br />
 import java.net.URL;<br />
 import java.util.Optional;<br />
 import java.util.ResourceBundle;<br />
-
+# References
+https://www.youtube.com/watch?v=_1nqY-DKP9A&t=2584s 
 
 
