@@ -7,7 +7,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class MsgServer {
-
+//socket
     private ServerSocket myServerSocket;
     private Socket mySocket;
     private BufferedReader myReader;
@@ -17,7 +17,7 @@ public class MsgServer {
 
 
     public MsgServer(ServerSocket myServerSocket) {
-        try {
+        try { //accepts socket and reads stream
             this.myServerSocket = myServerSocket;
             this.mySocket = myServerSocket.accept();
             this.myReader = new BufferedReader(new InputStreamReader(mySocket.getInputStream()));
@@ -29,14 +29,14 @@ public class MsgServer {
 
     }
     public void sendClientMessage(String messageToBeSent){
-        try{
-            myWriter.write(messageToBeSent);
-            myWriter.newLine();
+        try{ //send message to client
+            myWriter.write(messageToBeSent); //writing message
+            myWriter.newLine(); //newline
             myWriter.flush();
         }catch(IOException exception){
             exception.printStackTrace();
             System.out.println("Could not send the message :(");
-            eventCloser(mySocket,myReader,myWriter);
+            eventCloser(mySocket,myReader,myWriter); //closes process
 
         }
 
@@ -48,7 +48,7 @@ public class MsgServer {
             public void run() {
                 while (mySocket.isConnected()){
                     try{
-
+//reads client message
                         String toClientMessage = myReader.readLine();
                         ServerController.printMessageOnGUI(toClientMessage, myVbox);
                     }catch(IOException exception){
@@ -64,7 +64,7 @@ public class MsgServer {
     }
 
     public void eventCloser(Socket mySocket, BufferedReader myReader, BufferedWriter myWriter){
-        try{
+        try{ //closes process
             if (mySocket != null){
                 mySocket.close();
             }
