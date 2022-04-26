@@ -14,8 +14,8 @@ public class ClientMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("UI.fxml"));
-        primaryStage.setTitle("OTU CHAT APPLICATION - Client");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setTitle("OTU CHAT APPLICATION - Client"); //title
+        primaryStage.setScene(new Scene(root, 600, 400));//size
         primaryStage.show();
     }
 
