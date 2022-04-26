@@ -36,12 +36,12 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
 [![Watch the video]https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png](https://www.youtube.com/watch?v=lSGm8P7wH8I&feature=youtu.be)
 # How to Run the Project (Step-By-Step)
 * First export the files in this repository to a zip file. 
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step1.png "Zip File")
-* Extract the folders to the directory of your choice. Then go in that folder and right click to open the MessengerClient folder and MessengerServer folder in the IDE of your choice (preferably IntelliJ). After this, trust the project. 
-
-* Now we have to add run configurations for our project. Click Add Configuration. Now make the Server and Main class as main classes. The configurations should match the photos below:
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/step4.png "JAR Files")
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/part5!.png "JAR Files")
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/downloadzip.png "Zip")
+* Extract the folders to the directory of your choice. Then go in that folder and right click to open the MessengerClient folder and MessengerServer folder in the IDE of your choice (preferably IntelliJ). After this, trust the project. Once you open them both, set them up side by side. 
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/clientserverdemo.png)
+* Now we have to add run configurations for our project. Click Add Configuration. Now make the ServerMain and ClientMain class as main classes. The configurations should match the photos below:
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/clientmain.png)
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/servermain.png)
 
 
 * Now you can click OK and start running the program! 
@@ -82,10 +82,5 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
 * javax.imageio.ImageIO;
 * java.awt.image.BufferedImage;
 * java.util.ResourceBundle;
-# Extra Notes
-* It seems that javaFX CSS generally has many bugs and issues that can arise randomly. That being said, there is a javaFX CSS bug when our Main file is run. The program still works, but for now there is no known solution to this bug:
 
-WARNING: Caught 'java.lang.ClassCastException: class javafx.scene.paint.Color cannot be cast to class java.lang.String (javafx.scene.paint.Color is in module javafx.graphics of loader 'app'; java.lang.String is in module java.base of loader 'bootstrap')' while converting value for '-fx-focus-traversable' from inline style on TextField[id=userName, styleClass=text-input text-field txtFont]
-
-Here is some more info on this bug: https://bugs.openjdk.java.net/browse/JDK-8268657
 
