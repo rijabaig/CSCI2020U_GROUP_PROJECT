@@ -17,23 +17,20 @@ Welcome! This is our Final Project repo. Here you can find all you need to know 
   * Editing and refining code <br />
 
 # Introduction
- This program is an interactive messaging software.  It was implemented using a combination of client- server sockets, multithreading, file I/O, and finally, displayed using JavaFX. After running it, chat window is displayed, where you can chat with the server. Additionally, an About us button is featured which displays information about the app. Once they login, they can begin sending messeges to other users, while also viewing their message history on screen. Additionally, a fun button is featured on the client side, which runs an animation when clicked on it. 
+This program is an interactive messaging software.  It was implemented using a combination of client- server sockets, multithreading, file I/O, and finally, displayed using JavaFX. After running it, chat window is displayed, where you can chat with the server. Additionally, an About us button is featured which displays information about the app. Once they login, they can begin sending messeges to other users, while also viewing their message history on screen. Additionally, a fun button is featured on the client side, which runs an animation when clicked on it. 
+
 # Photo Gallery
+
 # Photo Gallery
-* The login page <br />
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png "Login Page")
-* Signup Page <br />
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/signup.png "Signup Page")
-* Chat Page <br />
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/chatpage.png "Chat Page")
-* Profile page with user info <br />
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/profileinfo.png "Profile Page")
-* An example of a typical chat with a user <br />
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/chatexample.png "Chat with User")
-* Scenebuilder <br />
-![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/scenebuilder.png "Scenebuilder")
+* The main server page <br />
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/Screen%20Shot%202022-04-25%20at%208.51.08%20PM.png)
+* Client Page <br />
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/Screen%20Shot%202022-04-25%20at%208.51.12%20PM.png)
+* About Page <br />
+![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/Screen%20Shot%202022-04-25%20at%208.51.21%20PM.png)
+
 # Video Demonstration 
-[![Watch the video]https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/images/login.png](https://www.youtube.com/watch?v=lSGm8P7wH8I&feature=youtu.be)
+[![Watch the video](https://www.youtube.com/watch?v=4mplcZy4_Rw&feature=youtu.be)
 # How to Run the Project (Step-By-Step)
 * First export the files in this repository to a zip file. 
 ![Alt text](https://github.com/rijabaig/CSCI2020U_GROUP_PROJECT/blob/main/photos/downloadzip.png "Zip")
