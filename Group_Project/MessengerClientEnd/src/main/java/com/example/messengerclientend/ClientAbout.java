@@ -110,26 +110,27 @@ public class ClientAbout implements Initializable {
 
 
     }
-
+//this method prints server messages
     public static void printMessageOnGUI(String serverMessage, VBox myVbox){
         HBox myHbox = new HBox();
-        myHbox.setAlignment(Pos.CENTER_LEFT);
+        myHbox.setAlignment(Pos.CENTER_LEFT); //aligning
         myHbox.setPadding(new Insets(7,7,7,10));
 
-        Text myText = new Text(serverMessage);
+        Text myText = new Text(serverMessage); creating text with server message
         TextFlow myTextFlow = new TextFlow(myText);
-        myTextFlow.setStyle("-fx-color:rgb(239,242,255);"+"-fx-background-color:rgb(15,125,242);"+"-fx-background-radius: 20px;");
+        myTextFlow.setStyle("-fx-color:rgb(239,242,255);"+"-fx-background-color:rgb(15,125,242);"+"-fx-background-radius: 20px;"); //color
         myTextFlow.setPadding(new Insets(7,10,7,10));
         myHbox.getChildren().add(myTextFlow);
 
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                myVbox.getChildren().add(myHbox);
+                myVbox.getChildren().add(myHbox); //running
             }
         });
 
     }
+    //reads from fxml file and sets scene
 
     @FXML
     public void changetoAbout(ActionEvent e) throws Exception {
@@ -140,10 +141,10 @@ public class ClientAbout implements Initializable {
         aboutStage.setScene(aboutScene);
         aboutStage.show();
     }
-
+//changes scene back to main screen
     @FXML
     public void changetoHome(ActionEvent e) throws Exception {
-        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("UI.fxml"));
+        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("UI.fxml")); //calls UI fxml whhich helps set main scene
         Stage homeStage = (Stage)((Node)e.getSource()).getScene().getWindow();
         Scene homeScene = new Scene(root);
 //        aboutStage.setTitle("OTU CHAT APPLICATION - About");
