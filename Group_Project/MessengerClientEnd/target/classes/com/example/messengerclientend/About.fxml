@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="UI_Anchor" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.messengerclientend.ClientAbout">
+    <children>
+        <Button fx:id="Back" layoutX="22.0" layoutY="360.0" minWidth="33.0" mnemonicParsing="false" onAction="#changetoHome" prefHeight="32.0" prefWidth="54.0" text="Back" />
+      <Label layoutX="76.0" layoutY="298.0" prefHeight="57.0" prefWidth="207.0" text="2000 Simcoe Street North Oshawa&#10;Ontario L1G 0C5&#10;Canada" />
+      <Label layoutX="355.0" layoutY="298.0" prefHeight="26.0" prefWidth="207.0" text="905.721.8668" />
+      <Label layoutX="76.0" layoutY="176.0" prefHeight="116.0" prefWidth="510.0" text="The University of Ontario Institute of Technology, corporately branded as Ontario Tech University or Ontario Tech, is a public research university located in Oshawa, Ontario, Canada. Ontario Tech's main campus is located on approximately 400 acres (160 ha) of land in the  northern part of Oshawa. It operates a secondary campus in the  downtown area of Oshawa.The school was founded in 2002 via the  University of Ontario Institute of Technology Act, 2002, passed by the Government of Ontario." wrapText="true" />
+      <ImageView fitHeight="116.0" fitWidth="524.0" layoutX="38.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../src/main/resources/com/example/messengerclientend/ontarioTechULogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="318.0" layoutY="301.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../src/main/resources/com/example/messengerclientend/phoneIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="40.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../src/main/resources/com/example/messengerclientend/mapIcon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="26.0" fitWidth="22.0" layoutX="38.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../src/main/resources/com/example/messengerclientend/infoIcon.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
