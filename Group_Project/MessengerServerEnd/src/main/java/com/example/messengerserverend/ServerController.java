@@ -49,17 +49,17 @@ public class ServerController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
-            myServer = new MsgServer (new ServerSocket(2020));
+            myServer = new MsgServer (new ServerSocket(2020)); //connecting to port 
 
         }catch (IOException exception){
             exception.printStackTrace();
             System.out.println("Server was not created :(");
         }
 
-        Vbox_Message.heightProperty().addListener(new ChangeListener<Number>() {
+        Vbox_Message.heightProperty().addListener(new ChangeListener<Number>() { //changing heights based off messages
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                scrollMessages.setVvalue((Double) t1);
+                scrollMessages.setVvalue((Double) t1); 
             }
 
         });
@@ -72,23 +72,23 @@ public class ServerController implements Initializable {
             public void handle(ActionEvent event) {
                 String messageToBeSent = sendMessage.getText();
                 if (!messageToBeSent.isEmpty()){
-                    HBox myHbox = new HBox();
-                    myHbox.setAlignment(Pos.CENTER_RIGHT);
+                    HBox myHbox = new HBox(); //new hbox
+                    myHbox.setAlignment(Pos.CENTER_RIGHT); //setting alignment
                     myHbox.setPadding(new Insets(7,7,7,14));
 
                     Text textMessage = new Text (messageToBeSent);
                     TextFlow textMessageFlow = new TextFlow(textMessage);
 
-                    //if possible change the color codes
+                    //color codes
                     textMessageFlow.setStyle( "-fx-background-color: #dddddd;");
                     textMessageFlow.setPadding(new Insets(7,10,7,10));
-                    textMessage.setFill(Paint.valueOf("blue"));
+                    textMessage.setFill(Paint.valueOf("blue")); //fill color
 
-                    myHbox.getChildren().add(textMessageFlow);
+                    myHbox.getChildren().add(textMessageFlow);v //setting up layout
                     Vbox_Message.getChildren().add(myHbox);
 
                     myServer.sendClientMessage(messageToBeSent);
-                    sendMessage.clear();
+                    sendMessage.clear();//clears textfield 
                 }
             }
         });
