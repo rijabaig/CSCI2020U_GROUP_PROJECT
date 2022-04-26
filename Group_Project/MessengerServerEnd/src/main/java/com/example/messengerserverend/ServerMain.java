@@ -10,7 +10,7 @@ public class ServerMain extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("UI.fxml"));
-        primaryStage.setTitle("OTU CHAT APPLICATION - Server");
+        primaryStage.setTitle("OTU CHAT APPLICATION - Server"); //setting scene with title
         primaryStage.setScene(new Scene(root, 470, 680));
         primaryStage.show();
     }
