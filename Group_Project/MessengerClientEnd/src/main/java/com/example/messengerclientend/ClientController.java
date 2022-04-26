@@ -103,7 +103,7 @@ public class ClientController implements Initializable {
         sendButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                String messageToBeSent = sendMessage.getText();
+                String messageToBeSent = sendMessage.getText(); //message string
                 if (!messageToBeSent.isEmpty()){
                     HBox myHBox = new HBox();
                     myHBox.setAlignment(Pos.CENTER_RIGHT);
@@ -116,7 +116,7 @@ public class ClientController implements Initializable {
                     myText.setFill(Paint.valueOf("red"));
 
                     myHBox.getChildren().add(myTextFlow);
-                    Vbox_Message.getChildren().add(myHBox);
+                    Vbox_Message.getChildren().add(myHBox); //adding message to screen
 
                     myClient.sendServerMessage(messageToBeSent);
                     sendMessage.clear(); //clearing field
@@ -135,7 +135,7 @@ public class ClientController implements Initializable {
         myHbox.setAlignment(Pos.CENTER_LEFT);
         myHbox.setPadding(new Insets(7,7,7,10));
 
-        Text myText = new Text(serverMessage); 
+        Text myText = new Text(serverMessage); //server message 
         TextFlow myTextFlow = new TextFlow(myText);
         myTextFlow.setStyle("-fx-color:#000000;");
         myTextFlow.setPadding(new Insets(7,10,7,10));
