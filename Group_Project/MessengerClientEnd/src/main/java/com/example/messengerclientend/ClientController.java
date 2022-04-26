@@ -53,32 +53,32 @@ public class ClientController implements Initializable {
     private ScrollPane scrollMessages;
 
     @FXML
-    private Button sendButton;
+    private Button sendButton; //sending button
 
     @FXML
-    private TextField sendMessage;
+    private TextField sendMessage; //message textfield
 
     @FXML
     private Button tictactoe;
 
     @FXML
-    private Circle dot;
+    private Circle dot; //animation circle
 
     @FXML
-    private Button exitbutton;
+    private Button exitbutton; //exit button
 
     private MsgClient myClient;
     TranslateTransition transition;
     @FXML
     void go(ActionEvent event) {
-        transition.play();
+        transition.play(); //creates animation
     }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try{
-            myClient =  new MsgClient(new Socket("localhost",2020 ));
-            System.out.println("Successful connection with the server!");
+            myClient =  new MsgClient(new Socket("localhost",2020 )); //connecting with port 2020
+            System.out.println("Successful connection with the server!"); //prints message
         } catch(IOException exception){
             exception.printStackTrace();
             System.out.println("Could not connect with the server");
@@ -87,16 +87,16 @@ public class ClientController implements Initializable {
         Vbox_Message.heightProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                scrollMessages.setVvalue((Double) t1);
+                scrollMessages.setVvalue((Double) t1); //allows for scrolling
 
             }
-        });
+        }); //for dot animation
         transition = new TranslateTransition();
         transition.setNode(dot);
         transition.setToX(120);
-        transition.setDuration(Duration.millis(1000));
+        transition.setDuration(Duration.millis(1000)); //setting time
         transition.setAutoReverse(true);
-        transition.setCycleCount(2);
+        transition.setCycleCount(2); //setting how many times it goes back and forth
 
         myClient.gotServerMessage(Vbox_Message);
 
@@ -108,10 +108,10 @@ public class ClientController implements Initializable {
                     HBox myHBox = new HBox();
                     myHBox.setAlignment(Pos.CENTER_RIGHT);
                     myHBox.setPadding(new Insets(7,7,7,10));
-                    Text myText = new Text(messageToBeSent);
-                    TextFlow myTextFlow = new TextFlow(myText);
+                    Text myText = new Text(messageToBeSent); //setting text message to myText
+                    TextFlow myTextFlow = new TextFlow(myText); //laying out text
 
-                    myTextFlow.setStyle("-fx-background-color: #dddddd;");
+                    myTextFlow.setStyle("-fx-background-color: #dddddd;"); //color
                     myTextFlow.setPadding(new Insets(7,10,7,10));
                     myText.setFill(Paint.valueOf("red"));
 
@@ -119,13 +119,13 @@ public class ClientController implements Initializable {
                     Vbox_Message.getChildren().add(myHBox);
 
                     myClient.sendServerMessage(messageToBeSent);
-                    sendMessage.clear();
+                    sendMessage.clear(); //clearing field
                 }
             }
         });
 
         exitbutton.setOnAction((ActionEvent event) -> {
-            Platform.exit();
+            Platform.exit(); //exit button which closes the process
         });
 
     }
@@ -135,7 +135,7 @@ public class ClientController implements Initializable {
         myHbox.setAlignment(Pos.CENTER_LEFT);
         myHbox.setPadding(new Insets(7,7,7,10));
 
-        Text myText = new Text(serverMessage);
+        Text myText = new Text(serverMessage); 
         TextFlow myTextFlow = new TextFlow(myText);
         myTextFlow.setStyle("-fx-color:#000000;");
         myTextFlow.setPadding(new Insets(7,10,7,10));
@@ -144,17 +144,17 @@ public class ClientController implements Initializable {
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-                myVbox.getChildren().add(myHbox);
+                myVbox.getChildren().add(myHbox); //adding everything to layout
             }
         });
 
     }
 
     @FXML
-    public void changetoAbout(ActionEvent e) throws Exception {
+    public void changetoAbout(ActionEvent e) throws Exception { //changes to about screen
         Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("About.fxml"));
         Stage aboutStage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        Scene aboutScene = new Scene(root);
+        Scene aboutScene = new Scene(root); //sets scene
 //        aboutStage.setTitle("OTU CHAT APPLICATION - About");
         aboutStage.setScene(aboutScene);
         aboutStage.show();
